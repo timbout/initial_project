@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mon panier</title>
+    <script src="monjs.js"> </script>
+
+</head>
+<body>
+<header>
+    <script language = "javascript" type="text/javascript">
+
+function sum_elements(){
+    var somme=0;
+    var result = document.getElementById("somme");
+    for (var i = 1; i<6; i++) {
+        var elements = document.getElementById ("el_"+i);
+        if (elements.value !="" && !isNaN(elements.value)) {
+            somme += parseInt(elements.value);
+        }
+    } 
+    result.value = somme;
+
+    var total= document.getElementById ("total")
+    total.value= somme;
+}
+</script>
+
+</header>
+    <main>
+
+        <h1>
+            Calcul :
+        </h1>
+
+        <label fpr="el_1">Nombre 1:</label>
+        <input id="el_1" type="text" name="el_1" onkeyup="sum_elements();">
+
+        <label fpr="el_2">Nombre 2:</label>
+        <input id="el_2" type="text" name="el_2" onkeyup="sum_elements();">
+
+        
+
+        <br>
+        <label fpr="el_3">Nombre 3:</label>
+        <input id="el_3" type="text" name="el_3" onkeyup="sum_elements();">
+
+        <label fpr="el_4">Nombre 4:</label>
+        <input id="el_4" type="text" name="el_4" onkeyup="sum_elements();">
+
+       
+        <br>
+
+        <label fpr="el_5">Nombre 5:</label>
+        <input id="el_5" type="text" name="el_5" onkeyup="sum_elements();">
+
+        <label fpr="el_6">Nombre 5:</label>
+        <input id="el_6" type="text" name="el_6" onkeyup="sum_elements();">
+        
+        <br>
+
+        
+        <label fpr="total">Total </label>
+        <input id="total" type="text" name="total" >
+
+
+    </main>
+
+</body>
+
+</html>
