@@ -1,47 +1,79 @@
+
+// JS du tp facturation du panier en temps reel :
+
+function aPayerParArticle(){
+    var facturations = document.querySelectorAll (".global li")
+    facturations.forEach(function(facturation){
+        var price= facturation.querySelector(".price");
+        var quantite= facturation.querySelector(".quantite");
+       
+        if ((quantite.value  != "" && !isNaN (quantite.value)) && (price.value !="" && !isNaN (price.value))) {
+            var calc = price.value*quantite.value;
+            console.log(calc);
+            facturation.querySelector(".totalAPayer").value = calc;
+        }
+    });
+}
+
+// var totalGeneral = document.queryAll(".totalAPayer")
+// var netAPayer = 0;
+
+// elements.forEach(function(element){
+//     netAPayer += 
+// })
+
+
+
+
+
+
+
+
+
 // Cours DOM: but faire un formulaire qui va verifier les données saisies 
 
-function verif(){
-    // if (document.getElementById(All)=return true ) {
-    //     document.formul.focus();
-    //     document.formul.backgroundcolor ="solid red";
-    // }
+// function verif(){
+//     // if (document.getElementById(All)=return true ) {
+//     //     document.formul.focus();
+//     //     document.formul.backgroundcolor ="solid red";
+//     // }
 
-    if (document.getElementById ("Mr"&&"Mme").checked== "") {
-        alert("attention il faut mettre un titre")
-        return false
-    }
+//     if (document.getElementById ("Mr"&&"Mme").checked== "") {
+//         alert("attention il faut mettre un titre")
+//         return false
+//     }
 
 
-    if (document.getElementById ("nom").value=="") {
-        alert("attention il faut remplir le champ le Nom")
+//     if (document.getElementById ("nom").value=="") {
+//         alert("attention il faut remplir le champ le Nom")
 
-        return false
-        // console.log (document.getElementById ("nom").value);
-    }
+//         return false
+//         // console.log (document.getElementById ("nom").value);
+//     }
 
-    if (document.getElementById ("prenom").value=="") {
-        alert("attention il faut remplir le champ le Prénom")
+//     if (document.getElementById ("prenom").value=="") {
+//         alert("attention il faut remplir le champ le Prénom")
 
-        return false
-    }
-    if (document.getElementById ("mail").value=="") {
-        alert("attention il faut remplir le champ le Mail")
-        return false
-    }
-    if (document.getElementById ("tel").value=="") {
-        alert("attention il faut remplir le champ le Téléphone")
-        return false
-    }
-    var mobile= /^(01|02|03|04|05|06|07|08|09|0033|\+33)[0-9]{8}/;
-    if (mobile.test(document.getElementById('tel').value)){
-    return true;
-    }
-    else{
-    alert("entrez un bon numero");
-    document.formul.tel.focus();
-    document.formul.tel.style.backgroundcolor="#f2dede";
-    }
-}
+//         return false
+//     }
+//     if (document.getElementById ("mail").value=="") {
+//         alert("attention il faut remplir le champ le Mail")
+//         return false
+//     }
+//     if (document.getElementById ("tel").value=="") {
+//         alert("attention il faut remplir le champ le Téléphone")
+//         return false
+//     }
+//     var mobile= /^(01|02|03|04|05|06|07|08|09|0033|\+33)[0-9]{8}/;
+//     if (mobile.test(document.getElementById('tel').value)){
+//     return true;
+//     }
+//     else{
+//     alert("entrez un bon numero");
+//     document.formul.tel.focus();
+//     document.formul.tel.style.backgroundcolor="#f2dede";
+//     }
+// }
 
 
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> mon panier avec facture auto</title>
+    <script src= "jquery/jquery-3.2.1.min.js"></script>
+    
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").hide();
+            });
+            
+            // $("button").click(function(){
+            //     $("p").show();
+            // });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <h2> Hearing de la page </h2>
+    <p> Mon paragraphe </p>
+    <p> Un autre paragraphe </p>
+    <button> click me </button>
+
+
+    <div class="well">
+        <h1> Mon panier</h1>
+        <ul class="global">
+            <li class="match">
+
+                <strong>Billet match:</strong> 
+
+                
+                <!-- PU HT :
+                <input type="text" name="pu" class="puMatch" value=27.5> -->
+
+                Prix :
+                <input type="text" name="price" class="price watch" value=27.5>
+
+                Quantité :
+                <input type="text" name="quantite" class="quantite watch" value=1>
+                
+                <strong>Total :</strong>
+                <input type="text" name="totalAPayer" class="totalAPayer">
+
+                 
+
+                
+                
+            </li>
+            <br>
+            <br>
+            <li class="avion">
+                <strong>Billet avion:</strong> 
+
+                
+                <!-- PU HT :
+                <input type="text" name="pu" class="puAvion" value=27.5> -->
+
+                Prix :
+                <input type="text" name="price" class="price watch" value=175.99>
+
+                Quantité :
+                <input type="text" name="quantite" class="quantite watch" value=1>
+
+                <strong>Total :</strong>
+                <input type="text" name="totalAPayer" class="totalAPayer">
+
+              
+                
+            </li>
+
+
+            
+            
+        </ul>
+
+        <br>
+            
+            <li class ="global">
+                <strong>Total Général :</strong>
+                <input type="text" name="totalGeneral" class="totalGeneral">
+            </li>
+    </div>
+
+    <footer></footer>
+    <script src="jqueryjs.js"> </script>
+        <script>
+          aPayerParArticle();
+
+          document.querySelectorAll(".global .watch").forEach(function(field){
+            field.onkeyup= function (){
+                aPayerParArticle();
+            };
+
+          });
+        </script>
+    
+</body>
+</html>
