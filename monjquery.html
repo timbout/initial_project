@@ -3,20 +3,47 @@
 <head>
     <title> mon panier avec facture auto</title>
     <script src= "jquery/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+
     
 
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("p").hide();
-            });
-            
-            // $("button").click(function(){
-            //     $("p").show();
-            // });
 
-        });
+    <script type="text/javascript">
+        //  $(document).ready(function(){
+
+
+        //     $("button.off").click(function(){
+        //         $("p").hide();
+        //     });
+            
+        //     $("button.on").click(function(){
+        //         $("p").show();
+        //     });
+
+
+
+        //     // <!-- Les toggles: -->
+
+        //     $( "button.toggle" ).click (function() {
+        //         $( "p" ).toggle( "slow" );
+        //     });
+
+        //     $("#monImage").fadeOut(5000).delay(300).fadeIn(5000);
+
+
+
+
+        //     $("#checkAll").click(function(){
+        //         var magazines= $("#magazines").find(":checkbox");
+        //         if ("this.checkbox") {
+        //             magazines.prop("checked", true);
+        //         }
+        //         else{magazines.prop("checked", false);
+        //         }
+        //     });
+
+        // });
 
 
     </script>
@@ -24,9 +51,18 @@
 </head>
 <body>
     <h2> Hearing de la page </h2>
-    <p> Mon paragraphe </p>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
     <p> Un autre paragraphe </p>
-    <button> click me </button>
+    <button class = "off"> Masquer </button> <button class= "on"> Afficher </button>
+
+    <button class = "toggle"> masquer / afficher </button>
+    <br>
+    <img id="monImage" src="./images/car.jpg">
 
 
     <div class="well">
@@ -88,6 +124,31 @@
                 <input type="text" name="totalGeneral" class="totalGeneral">
             </li>
     </div>
+
+    <br>
+
+    <div>
+
+        <input id= "checkAll" type="checkbox"  > Cochez /Decochez
+        <ul id= "magazine" >
+            <li> <input type="checkbox"> Mag 1</li>
+            <li> <input type="checkbox"> Mag 2</li>
+            <li> <input type="checkbox"> Mag 3</li>
+            <li> <input type="checkbox"> Mag 4</li>
+        </ul>
+
+    </div>
+
+    <br>
+
+    <!-- permet d'avoir mon texte avec action sur nombre -->
+
+    <form>
+        <textarea id="message" name="message" cols="120" rows="10"> </textarea>
+        <p id="compteur"> 0  mots . 0  caracteres / 200 </p>
+    </form>
+
+
 
     <footer></footer>
     <script src="jqueryjs.js"> </script>

@@ -1,8 +1,8 @@
 
 body{
-    margin: 0;
+    /*margin: 0;
     color: white;
-    background: grey;
+    background: grey;*/
 }
 
 a{
@@ -72,6 +72,13 @@ table{
 }
 
 
+.mauvais{
+    color: red;
+}
+
+.mauvais-message{
+    background-color: yellow;
+}
 
 
 
